@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* Gotham font files should be placed in /public/fonts/
+   Required: GothamCondensed-Bold, GothamCondensed-Medium, Gotham-Book, Gotham-Medium */
+@font-face {
+  font-family: "Gotham Condensed";
+  src: url("/fonts/GothamCondensed-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham Condensed";
+  src: url("/fonts/GothamCondensed-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme inline {
+  /* Brand colors */
+  --color-primary:   #1F396D;
+  --color-accent:    #F15F3A;
+  --color-neutral:   #E8E6DB;
+  --color-success:   #2D8A4E;
+  --color-warning:   #D4930D;
+  --color-error:     #C93B3B;
+  --color-white:     #FFFFFF;
+
+  /* Semantic aliases */
+  --color-background: var(--color-neutral);
+  --color-surface:    var(--color-white);
+  --color-foreground: var(--color-primary);
+
+  /* Typography */
+  --font-heading: "Gotham Condensed", "Arial Narrow", Arial, sans-serif;
+  --font-body:    "Gotham", Arial, sans-serif;
+
+  /* Icon sizes */
+  --icon-sm: 20px;
+  --icon-md: 24px;
+}
+
+body {
+  background-color: var(--color-neutral);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+}
