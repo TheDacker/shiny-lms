@@ -8,6 +8,7 @@ import {
   Users,
   MapPin,
   LogOut,
+  GraduationCap,
 } from "lucide-react";
 import ShellLogo from "@/components/ShellLogo";
 import { createClient } from "@/lib/supabase/client";
@@ -104,6 +105,28 @@ export default function Sidebar({ firstName, lastName, role }: SidebarProps) {
           );
         })}
       </nav>
+
+      {/* Learner view toggle */}
+      <div className="px-3 pb-2">
+        <button
+          onClick={() => router.push("/learn")}
+          className="w-full flex items-center gap-2.5 px-3 py-2.5 rounded text-sm transition-colors"
+          style={{ color: "rgba(255,255,255,0.65)" }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLElement).style.backgroundColor =
+              "rgba(255,255,255,0.08)";
+            (e.currentTarget as HTMLElement).style.color = "white";
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLElement).style.backgroundColor = "";
+            (e.currentTarget as HTMLElement).style.color =
+              "rgba(255,255,255,0.65)";
+          }}
+        >
+          <GraduationCap size={18} />
+          <span>Learner View</span>
+        </button>
+      </div>
 
       {/* User + sign out */}
       <div className="px-3 py-4 border-t border-white/10">
